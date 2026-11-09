@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sebuah Pesan Untukmu ❤️</title>
+    <style>
+        body {
+            /* Menggunakan foto buket bunga sebagai background */
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('bunga.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #fff;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.65);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(8px);
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        h1 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #ff7675;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 10px;
+        }
+        .page {
+            display: none;
+        }
+        .page.active {
+            display: block;
+        }
+        h3 {
+            color: #ff7675;
+            margin-top: 0;
+        }
+        p {
+            line-height: 1.8;
+            font-size: 16px;
+            margin: 20px 0;
+            text-align: left;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #ff7675;
+        }
+        button {
+            background-color: #ff7675;
+            color: #fff;
+            border: none;
+            padding: 10px 25px;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #d63031;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>✨ Pesan Spesial Untuk Kamu ✨</h1>
+
+        <!-- Halaman 1 -->
+        <div class="page active" id="page-1">
+            <h3>Bagian 1: Jarak yang Memisahkan</h3>
+            <p>Meskipun raga kita belum pernah dipertemukan dalam satu ruang dan waktu yang sama, nyatanya rasa ini tumbuh begitu nyata di dalam dada. Jarak dan bentangan kilometer hanyalah angka, karena hatiku selalu bisa menemukan jalan untuk merasa dekat denganmu setiap hari.</p>
+            <button onclick="nextPage(2)">Lanjut ➡️</button>
+        </div>
+
+        <!-- Halaman 2 -->
+        <div class="page" id="page-2">
+            <h3>Bagian 2: Sederhana yang Berarti</h3>
+            <p>Obrolan kita, tawa kecil lewat pesan, dan suara yang menyapa di kala penat adalah alasan mengapa hari-hariku selalu terasa lebih baik. Terima kasih sudah hadir, menjadi tempatku berkeluh kesah, dan membuatku menantikan hari esok dengan senyuman.</p>
+            <button onclick="nextPage(3)">Lanjut ➡️</button>
+        </div>
+
+        <!-- Halaman 3 -->
+        <div class="page" id="page-3">
+            <h3>Bagian 3: Harapan untuk Bertemu</h3>
+            <p>Ada satu doa yang tidak pernah terlewatkan setiap malam—semoga takdir segera melangkah pada waktunya, mempertemukan kita dalam dekap hangat yang selama ini hanya bisa kita bayangkan dalam angan.</p>
+            <button onclick="nextPage(4)">Lanjut ➡️</button>
+        </div>
+
+        <!-- Halaman 4 -->
+        <div class="page" id="page-4">
+            <h3>Bagian 4: Ketulusan Hati</h3>
+            <p>Sampai hari pertemuan itu tiba, tetaplah disini menemaniku. Perasaan ini tulus apa adanya, tumbuh bukan karena kita sering bersua, tapi karena hati ini tahu kamu adalah rumah tempat singgah paling nyaman. ❤️</p>
+            <button onclick="nextPage(1)">🔄 Ulang dari Awal</button>
+        </div>
+    </div>
+
+    <script>
+        function nextPage(pageNum) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            document.getElementById('page-' + pageNum).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
