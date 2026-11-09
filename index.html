@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sebuah Pesan Spesial Untukmu ❤️</title>
+    <title>Sebuah Pesan Untukmu ❤️</title>
     <style>
         body {
-            background: linear-gradient(135deg, #fbc531 0%, #e84118 50%, #c23616 100%);
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('bunga.jpg');
+            background-size: cover;
+            background-position: center;
             background-attachment: fixed;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -15,200 +17,102 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            color: #333;
+            color: #fff;
         }
-        .card {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 40px;
-            border-radius: 25px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+        .container {
             max-width: 600px;
             width: 100%;
-            text-align: left;
-            position: relative;
-        }
-        .header-content {
+            background: rgba(0, 0, 0, 0.65);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(8px);
             text-align: center;
-            margin-bottom: 25px;
-        }
-        .heart {
-            font-size: 45px;
-            color: #e84118;
-            animation: pulse 1.5s infinite;
-            margin-bottom: 10px;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.25); }
-            100% { transform: scale(1); }
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
         h1 {
-            color: #c23616;
-            font-size: 26px;
-            margin: 0;
-        }
-        p {
-            font-size: 15px;
-            line-height: 1.8;
-            margin-bottom: 20px;
-            color: #444;
-            text-align: justify;
-        }
-        .question-box {
-            background: #fff5f5;
-            border-left: 5px solid #e84118;
-            padding: 15px 20px;
-            border-radius: 0 15px 15px 0;
-            margin: 25px 0;
-            text-align: center;
-        }
-        .question-box h2 {
-            color: #c23616;
             font-size: 22px;
-            margin: 0;
+            margin-bottom: 20px;
+            color: #ff7675;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 10px;
         }
-        .btn-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 30px;
-        }
-        .btn {
-            background-color: #e84118;
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            font-size: 16px;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: 0.3s;
-            font-weight: bold;
-            box-shadow: 0 4px 15px rgba(232, 65, 24, 0.4);
-        }
-        .btn:hover {
-            background-color: #c23616;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(194, 54, 22, 0.6);
-        }
-        .btn-no {
-            background-color: #7f8c8d;
-            box-shadow: 0 4px 15px rgba(127, 140, 141, 0.4);
-            position: relative;
-        }
-        .btn-no:hover {
-            background-color: #636e72;
-        }
-        .hidden {
+        .page {
             display: none;
         }
-        .secret-area {
-            margin-top: 30px;
-            padding-top: 15px;
-            border-top: 1px dashed #ddd;
-            text-align: center;
+        .page.active {
+            display: block;
         }
-        .btn-secret {
-            background-color: #2f3640;
-            font-size: 13px;
-            padding: 8px 15px;
-            border-radius: 15px;
+        h3 {
+            color: #ff7675;
+            margin-top: 0;
         }
-        #secretResult {
-            margin-top: 10px;
+        p {
+            line-height: 1.8;
+            font-size: 16px;
+            margin: 20px 0;
+            text-align: left;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #ff7675;
+        }
+        button {
+            background-color: #ff7675;
+            color: #fff;
+            border: none;
+            padding: 10px 25px;
+            font-size: 15px;
             font-weight: bold;
-            color: #27ae60;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #d63031;
         }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <!-- HALAMAN 1: KATA-KATA CINTA -->
-        <div id="page1">
-            <div class="header-content">
-                <div class="heart">❤️</div>
-                <h1>Untuk Kamu yang Mengisi Hari-Hariku</h1>
-            </div>
-            
-            <p>
-                Hai... Ada satu hal yang sering aku pikirkan belakangan ini, tentang bagaimana takdir mempertemukan kita di dunia digital yang begitu luas. Kita tidak pernah berada di ruangan yang sama, deru napas kita tidak pernah saling bersahutan secara langsung, dan jarak fisik kita terbentang begitu jauh. Tapi anehnya, kehadiranmu di balik layar ponsel ini justru terasa begitu dekat di dalam dada.
-            </p>
+    <div class="container">
+        <h1>✨ Pesan Spesial Untuk Kamu ✨</h1>
 
-            <p>
-                Mungkin orang lain akan meragukan perasaan yang tumbuh tanpa pernah bersitatap. Mereka mungkin bilang, <i>"Bagaimana bisa mencintai seseorang yang wujud fisiknya belum pernah disentuh?"</i> Tapi mereka tidak tahu betapa dalamnya percakapan kita, betapa tulusnya tawa yang kamu ciptakan lewat pesan-pesan singkatmu, dan betapa menenangkannya suaramu di saat-saat beratku. Bagi hatiku, kamu bukan lagi sekadar nama di dalam daftar obrolan, melainkan rumah tempatku pulang setelah lelah seharian.
-            </p>
-
-            <p>
-                Setiap kali aku melihat notifikasi darimu, ada debar kecil yang selalu berhasil membuat hariku jadi lebih baik. Kamu adalah alasan di balik senyumku saat pagi, dan doa yang selalu kusebut pelan sebelum tidur. Jarak ini memang nyata, layar ini memang membatasi raga kita, tapi ketulusan rasa ini sama sekali tidak berkurang sedikit pun oleh ruang dan waktu.
-            </p>
-
-            <div class="btn-container">
-                <button class="btn" onclick="goToPage2()">Lanjut Membaca ✨</button>
-            </div>
+        <!-- Halaman 1 -->
+        <div class="page active" id="page-1">
+            <h3>Bagian 1: Jarak yang Memisahkan</h3>
+            <p>Meskipun raga kita belum pernah dipertemukan dalam satu ruang dan waktu yang sama, nyatanya rasa ini tumbuh begitu nyata di dalam dada. Jarak dan bentangan kilometer hanyalah angka, karena hatiku selalu bisa menemukan jalan untuk merasa dekat denganmu setiap hari.</p>
+            <button onclick="nextPage(2)">Lanjut ➡️</button>
         </div>
 
-        <!-- HALAMAN 2: TEMBAK JADI PACAR -->
-        <div id="page2" class="hidden">
-            <div class="header-content">
-                <div class="heart">💖</div>
-                <h1>Sebuah Keputusan</h1>
-            </div>
-
-            <p>
-                Aku sadar, cepat atau lambat, aku mendambakan lebih dari sekadar sapaan "selamat pagi" atau "selamat tidur" lewat teks. Aku ingin ada di sampingmu saat kamu sedih, aku ingin menghapus air matamu secara langsung, dan aku ingin menjadi alasan di balik senyum manismu di dunia nyata, bukan cuma di balik layar.
-            </p>
-
-            <div class="question-box">
-                <h2>Maukah kamu memberiku kesempatan untuk meresmikan semua rasa ini?<br>Maukah kamu menjadi pacarku?</h2>
-            </div>
-
-            <div class="btn-container" id="buttons">
-                <button class="btn" onclick="answerYes()">Mau Banget, Aku Terima! 💕</button>
-                <button class="btn btn-no" id="btnNo" onmouseover="moveButton()" onclick="answerNo()">Enggak 🤭</button>
-            </div>
-
-            <div id="response" style="text-align: center; margin-top: 20px; font-weight: bold; color: #c23616;"></div>
+        <!-- Halaman 2 -->
+        <div class="page" id="page-2">
+            <h3>Bagian 2: Sederhana yang Berarti</h3>
+            <p>Obrolan kita, tawa kecil lewat pesan, dan suara yang menyapa di kala penat adalah alasan mengapa hari-hariku selalu terasa lebih baik. Terima kasih sudah hadir, menjadi tempatku berkeluh kesah, dan membuatku menantikan hari esok dengan senyuman.</p>
+            <button onclick="nextPage(3)">Lanjut ➡️</button>
         </div>
 
-        <!-- TOMBOL RAHASIA KHUSUS UNTUK ANDA (PEMBUAT) -->
-        <div class="secret-area">
-            <button class="btn btn-secret" onclick="revealAnswer()">🔑 Cek Jawaban Dia (Khusus Kamu)</button>
-            <div id="secretResult"></div>
+        <!-- Halaman 3 -->
+        <div class="page" id="page-3">
+            <h3>Bagian 3: Harapan untuk Bertemu</h3>
+            <p>Ada satu doa yang tidak pernah terlewatkan setiap malam—semoga takdir segera melangkah pada waktunya, mempertemukan kita dalam dekap hangat yang selama ini hanya bisa kita bayangkan dalam angan.</p>
+            <button onclick="nextPage(4)">Lanjut ➡️</button>
+        </div>
+
+        <!-- Halaman 4 -->
+        <div class="page" id="page-4">
+            <h3>Bagian 4: Ketulusan Hati</h3>
+            <p>Sampai hari pertemuan itu tiba, tetaplah disini menemaniku. Perasaan ini tulus apa adanya, tumbuh bukan karena kita sering bersua, tapi karena hati ini tahu kamu adalah rumah tempat singgah paling nyaman. ❤️</p>
+            <button onclick="nextPage(1)">🔄 Ulang dari Awal</button>
         </div>
     </div>
 
     <script>
-        function goToPage2() {
-            document.getElementById('page1').classList.add('hidden');
-            document.getElementById('page2').classList.remove('hidden');
-        }
-
-        function answerYes() {
-            localStorage.setItem('jawabanDia', 'DIARY: Dia bilang MAU! Yeeeeay! 🥰🎉');
-            document.getElementById('buttons').style.display = 'none';
-            document.getElementById('response').innerHTML = "Yeay! Terima kasih sudah memilihku dan percaya pada ketulusan rasa ini. Jarak ini cuma angka, karena hatiku sudah lebih dulu menetap di kamu. Nggak sabar nunggu hari di mana kita bisa benar-benar bertemu! 🥰✨";
-        }
-
-        function answerNo() {
-            localStorage.setItem('jawabanDia', 'DIARY: Wah, sayangnya dia pilih ENGGAK/Pikir-pikir dulu 😅');
-            document.getElementById('response').innerHTML = "Yah... tapi tidak apa-apa, aku akan tetap menunggumu dan menghargai keputusanmu. 😊";
-        }
-
-        function moveButton() {
-            const btnNo = document.getElementById('btnNo');
-            const x = Math.random() * 200 - 100;
-            const y = Math.random() * 80 - 40;
-            btnNo.style.transform = `translate(${x}px, ${y}px)`;
-        }
-
-        function revealAnswer() {
-            const result = localStorage.getItem('jawabanDia');
-            const display = document.getElementById('secretResult');
-            if (result) {
-                display.innerHTML = result;
-            } else {
-                display.innerHTML = "⚠️ Belum ada respons. Dia belum mengklik tombol jawaban di halaman 2.";
-            }
+        function nextPage(pageNum) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            document.getElementById('page-' + pageNum).classList.add('active');
         }
     </script>
 
